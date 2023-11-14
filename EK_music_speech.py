@@ -143,9 +143,10 @@ ir_delay = np.array([30.78, 52.76, 30.59, 55.01, 73.36, 44.53, 50.90, 68.35, 79.
 ek_music = []
 ek_speech = []
 
+# Cambiar rango depende la cantidad de posiciones de escucha analizados
 for i in range(20):
     data, fs = sf.read(
-        'C:/Users/leand/Desktop/PARCIAL IMA/Auralisation/' + str(i+1) + '.wav')
+        'C:/Users/leand/Desktop/PARCIAL IMA/Auralisation/' + str(i+1) + '.wav')  # Cambiar el path por donde se encuentre la respuesta al impulso
 
     delay_samples = int(ir_delay[i]*fs/1000)
 
